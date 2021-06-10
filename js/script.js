@@ -36,4 +36,51 @@ function lunghezza(prima, seconda) {
             document.getElementById('parola').innerHTML = secondaParola;
             break;
     }
+};
+
+//--------ESERCIZIO 3---------//
+//---Creiamo due array---//
+var primoArray = generaArray(3);
+var secondoArray = generaArray(3);
+// console.Log per visualizzare gli Array creati
+console.log(primoArray);
+console.log(secondoArray);
+
+//  nome della funzione
+var mixArray = doubleArray(primoArray, secondoArray);
+console.log(mixArray);
+
+//-----FUNCTIONS----//
+function doubleArray(x, y) {
+    var mixArray = [];
+    for (var i = 0; i < x.length; i++) {
+        mixArray.push(x[i]) + mixArray.push(y[i])
+    }
+    return mixArray;
+
 }
+
+function generaArray(longArray) {
+    var array = [];
+    while (array.length < longArray) {
+        var numeroRandom = Math.floor(Math.random() * 10);
+        if (!array.includes(numeroRandom)) {
+            array.push(numeroRandom);
+        }
+    }
+    return array;
+};
+
+//-------ESERCIZIO 4-------//
+
+var parola = prompt('Inserisci parola');
+
+function capitalize(str) {
+    var lettera = str[0];
+    lettera = lettera.toUpperCase();
+    str = str.substring(1).toLowerCase();
+    str = lettera + str;
+    console.log(str);
+    return str;
+}
+console.log(capitalize(parola));
