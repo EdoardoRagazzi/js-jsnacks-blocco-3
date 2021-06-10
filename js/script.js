@@ -16,3 +16,24 @@ function nuovoArray(array, min, max) {
     }
     return newArray;
 };
+
+//-----------ESERCIZIO 2--------------//
+
+var primaParola = prompt('inserisci parola');
+var secondaParola = prompt('inserisci parola');
+var parola = lunghezza(primaParola, secondaParola);
+
+
+function lunghezza(prima, seconda) {
+    switch (parola) {
+        case (primaParola.length == secondaParola.length):
+            document.getElementById('parola').innerHTML = primaParola + ' ' + secondaParola;
+            break;
+        case (primaParola.length > secondaParola.length):
+            document.getElementById('parola').innerHTML = primaParola;
+            break;
+        case (primaParola.length < secondaParola.length):
+            document.getElementById('parola').innerHTML = secondaParola;
+            break;
+    }
+}
